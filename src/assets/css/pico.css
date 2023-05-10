@@ -2074,7 +2074,7 @@ dialog:not([open]), dialog[open=false] {
 */
 
 nav[aria-label="navbar"] + main {
-  margin-top: 100px;
+  margin-top: calc(var(--spacing) * 4);
 }
 
 /* Header */
@@ -2087,19 +2087,11 @@ nav[aria-label="navbar"] + main {
   width: 100%;
 }
 
-[aria-label="navbar"] ul{
-  padding: 0;
-}
-
-[aria-label="navbar"] ul li{
-  list-style: none;
-}
-
 /* Logo */
 [aria-label="navbar"] > a {
   display: inline-block;
   color: var(--primary-inverse);
-  font-size: 2.5em;
+  font-size: calc(var(--font-size) * 2);
   margin-left: 0.5em;
   text-decoration: none;
 }
@@ -2120,9 +2112,14 @@ nav[aria-label="navbar"] + main {
   transition: max-height .5s ease-out;
 }
 
+[aria-label="primary"] ul li{
+  margin: 0;
+  list-style: none;
+}
+
 [aria-label="primary"] ul a{
   display: block;
-  padding: 1.5em;
+  padding: 1em;
   color: var(--primary-inverse);
   text-decoration: none;
 }
@@ -2140,7 +2137,7 @@ nav[aria-label="navbar"] + main {
 label {
   cursor: pointer;
   float: right;
-  padding: 40px 20px;
+  padding: 25px 20px;
 }
 
 label span {
@@ -2163,11 +2160,11 @@ label span::after{
 }
 
 label span::before{
-  top: 5px;
+  top: 6px;
 }
 
 label span::after{
-  top: -5px;
+  top: -6px;
 }
 
 input {
