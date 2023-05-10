@@ -1,13 +1,33 @@
 @charset "UTF-8";
-/*!
- * Pico CSS v1.5.10 (https://picocss.com)
- * Copyright 2019-2023 - Licensed under MIT
- */
-/**
- * Theme: default
- */
+
+/*
+|==========================================|
+| Pico CSS v1.5.10 (https://picocss.com)   |
+| Copyright 2019-2023 - Licensed under MIT |
+|==========================================|
+*/
+
+/*
+================
+* Theme: default
+================
+  Colors:
+    - Red:           0
+    - Orange:       30
+    - Yellow:       60
+    - Chartreuse:   90
+    - Green:       120
+    - Springgreen: 150
+    - Cyan:        180
+    - Azure:       210
+    - Blue:        240
+    - Violet:      270
+    - Magenta:     300
+    - Rose:        330
+    - Red:         360
+*/
 :root {
-  --hue: 30;
+  --hue: 0;
   --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -205,27 +225,27 @@ kbd {
 
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --background-color: #fff;
-  --color: hsl(205, 20%, 32%);
-  --h1-color: hsl(205, 30%, 15%);
-  --h2-color: #24333e;
-  --h3-color: hsl(205, 25%, 23%);
-  --h4-color: #374956;
-  --h5-color: hsl(205, 20%, 32%);
-  --h6-color: #4d606d;
-  --muted-color: hsl(205, 10%, 50%);
-  --muted-border-color: hsl(205, 20%, 94%);
+  --background-color: hsl(var(--hue), 20%, 93%);
+  --color: hsl(var(--hue), 20%, 32%);
+  --h1-color: hsl(var(--hue), 30%, 15%);
+  --h2-color: hsl(var(--hue), 27%, 19%);
+  --h3-color: hsl(var(--hue), 25%, 23%);
+  --h4-color: hsl(var(--hue), 22%, 28%);
+  --h5-color: hsl(var(--hue), 20%, 32%);
+  --h6-color: hsl(var(--hue), 17%, 36%);
+  --muted-color: hsl(var(--hue), 10%, 50%);
+  --muted-border-color: hsl(var(--hue), 20%, 94%);
   --primary: hsl(var(--hue), 85%, 41%);
   --primary-hover: hsl(var(--hue), 90%, 32%);
-  --primary-focus: rgba(16, 149, 193, 0.125);
+  --primary-focus: hsl(var(--hue), 85%, 36%);
   --primary-inverse: #fff;
-  --secondary: hsl(205, 15%, 41%);
-  --secondary-hover: hsl(205, 20%, 32%);
-  --secondary-focus: rgba(89, 107, 120, 0.125);
+  --secondary: hsl(var(--hue), 15%, 41%);
+  --secondary-hover: hsl(var(--hue), 20%, 32%);
+  --secondary-focus: hsla(var(--hue), 15%, 41%, 0.13);
   --secondary-inverse: #fff;
-  --contrast: hsl(205, 30%, 15%);
+  --contrast: hsl(var(--hue), 30%, 15%);
   --contrast-hover: #000;
-  --contrast-focus: rgba(89, 107, 120, 0.125);
+  --contrast-focus: hsla(var(--hue), 15%, 41%, 0.13);
   --contrast-inverse: #fff;
   --mark-background-color: #fff2ca;
   --mark-color: #543a26;
@@ -311,27 +331,27 @@ kbd {
 
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --background-color: #11191f;
-    --color: hsl(205, 16%, 77%);
-    --h1-color: hsl(205, 20%, 94%);
-    --h2-color: #e1e6eb;
-    --h3-color: hsl(205, 18%, 86%);
-    --h4-color: #c8d1d8;
-    --h5-color: hsl(205, 16%, 77%);
-    --h6-color: #afbbc4;
-    --muted-color: hsl(205, 10%, 50%);
-    --muted-border-color: #1f2d38;
+    --background-color: hsl(var(--hue), 29%, 9%);
+    --color: hsl(var(--hue), 16%, 77%);
+    --h1-color: hsl(var(--hue), 20%, 94%);
+    --h2-color: hsl(var(--hue), 20%, 90%);
+    --h3-color: hsl(var(--hue), 18%, 86%);
+    --h4-color: hsl(var(--hue), 17%, 82%);
+    --h5-color: hsl(var(--hue), 16%, 77%);
+    --h6-color: hsl(var(--hue), 15%, 73%);
+    --muted-color: hsl(var(--hue), 10%, 50%);
+    --muted-border-color: hsl(var(--hue), 29%, 17%);
     --primary: hsl(var(--hue), 85%, 41%);
     --primary-hover: hsl(var(--hue), 90%, 32%);
-    --primary-focus: rgba(16, 149, 193, 0.25);
+    --primary-focus: hsla(var(--hue), 85%, 41%, 0.25);
     --primary-inverse: #fff;
-    --secondary: hsl(205, 15%, 41%);
-    --secondary-hover: hsl(205, 10%, 50%);
-    --secondary-focus: rgba(115, 130, 140, 0.25);
+    --secondary: hsl(var(--hue), 15%, 41%);
+    --secondary-hover: hsl(var(--hue), 10%, 50%);
+    --secondary-focus: hsla(var(--hue), 10%, 50%, 0.25);
     --secondary-inverse: #fff;
-    --contrast: hsl(205, 20%, 94%);
+    --contrast: hsl(var(--hue), 20%, 94%);
     --contrast-hover: #fff;
-    --contrast-focus: rgba(115, 130, 140, 0.25);
+    --contrast-focus: hsla(var(--hue), 10%, 50%, 0.25);
     --contrast-inverse: #000;
     --mark-background-color: #d1c284;
     --mark-color: #11191f;
@@ -417,27 +437,27 @@ kbd {
   }
 }
 [data-theme=dark] {
-  --background-color: #11191f;
-  --color: hsl(205, 16%, 77%);
-  --h1-color: hsl(205, 20%, 94%);
-  --h2-color: #e1e6eb;
-  --h3-color: hsl(205, 18%, 86%);
-  --h4-color: #c8d1d8;
-  --h5-color: hsl(205, 16%, 77%);
-  --h6-color: #afbbc4;
-  --muted-color: hsl(205, 10%, 50%);
-  --muted-border-color: #1f2d38;
+  --background-color: hsl(var(--hue), 29%, 9%);
+  --color: hsl(var(--hue), 16%, 77%);
+  --h1-color: hsl(var(--hue), 20%, 94%);
+  --h2-color: hsl(var(--hue), 20%, 90%);
+  --h3-color: hsl(var(--hue), 18%, 86%);
+  --h4-color: hsl(var(--hue), 17%, 82%);
+  --h5-color: hsl(var(--hue), 16%, 77%);
+  --h6-color: hsl(var(--hue), 15%, 73%);
+  --muted-color: hsl(var(--hue), 10%, 50%);
+  --muted-border-color: hsl(var(--hue), 29%, 17%);
   --primary: hsl(var(--hue), 85%, 41%);
   --primary-hover: hsl(var(--hue), 90%, 32%);
-  --primary-focus: rgba(16, 149, 193, 0.25);
+  --primary-focus: hsla(var(--hue), 85%, 41%, 0.25);
   --primary-inverse: #fff;
-  --secondary: hsl(205, 15%, 41%);
-  --secondary-hover: hsl(205, 10%, 50%);
-  --secondary-focus: rgba(115, 130, 140, 0.25);
+  --secondary: hsl(var(--hue), 15%, 41%);
+  --secondary-hover: hsl(var(--hue), 10%, 50%);
+  --secondary-focus: hsla(var(--hue), 10%, 50%, 0.25);
   --secondary-inverse: #fff;
-  --contrast: hsl(205, 20%, 94%);
+  --contrast: hsl(var(--hue), 20%, 94%);
   --contrast-hover: #fff;
-  --contrast-focus: rgba(115, 130, 140, 0.25);
+  --contrast-focus: hsla(var(--hue), 10%, 50%, 0.25);
   --contrast-inverse: #000;
   --mark-background-color: #d1c284;
   --mark-color: #11191f;
@@ -529,10 +549,12 @@ progress,
   accent-color: var(--primary);
 }
 
-/**
- * Document
- * Content-box & Responsive typography
- */
+/*
+=====================================
+* Document
+* Content-box & Responsive typography
+=====================================
+*/
 *,
 *::before,
 *::after {
@@ -2038,29 +2060,20 @@ dialog:not([open]), dialog[open=false] {
     opacity: 0;
   }
 }
-/* Navbar
+
+/*
+=============
+* Main Navbar
+=============
    Colors:
     var(--primary)
     var(--primary-hover)
     var(--primary-inverse)
-    var(--background-color)
+    var(--background)
     var(--color)
 */
 
-[aria-label="navbar"] a{
-  text-decoration: none;
-}
-
-[aria-label="navbar"] ul{
-  padding: 0;
-}
-
-[aria-label="navbar"] ul li{
-  list-style: none;
-}
-
-main {
-  margin: 1em;
+nav[aria-label="navbar"] + main {
   margin-top: 100px;
 }
 
@@ -2074,12 +2087,26 @@ main {
   width: 100%;
 }
 
+[aria-label="navbar"] ul{
+  padding: 0;
+}
+
+[aria-label="navbar"] ul li{
+  list-style: none;
+}
+
 /* Logo */
 [aria-label="navbar"] > a {
   display: inline-block;
   color: var(--primary-inverse);
-  font-size: 60px;
-  margin-left: 10px;
+  font-size: 2.5em;
+  margin-left: 0.5em;
+  text-decoration: none;
+}
+
+
+[aria-label="navbar"] > a:hover {
+  color: var(--primary-hover);
 }
 
 /* Nav menu */
@@ -2095,15 +2122,21 @@ main {
 
 [aria-label="primary"] ul a{
   display: block;
-  padding: 30px;
+  padding: 1.5em;
   color: var(--primary-inverse);
+  text-decoration: none;
+}
+
+[aria-label="primary"] li[aria-current="page"]{
+  background-color: var(--primary-focus);
+  color: var(--background);
 }
 
 [aria-label="primary"] ul a:hover{
   background-color: var(--primary-hover);
 }
 
-/* Menu Icon */
+/* Hamburger menu */
 label {
   cursor: pointer;
   float: right;
@@ -2141,7 +2174,7 @@ input {
   display: none;
 }
 
-/* Toggle menu icon */
+/* Toggle hamburger menu */
 input:checked ~ div{
   max-height: 100%;
 }
@@ -2174,41 +2207,31 @@ input:checked ~ label span::after {
   [aria-label="primary"] ul li{
       float: left;
   }
-
-  [aria-label="primary"] ul a:hover{
-      background-color: transparent;
-      color: var(--primary-hover);
-  }
-
-  li[aria-current="page"]{
-      background-color: var(--primary-hover);
-  }
-
-  [aria-label="primary"] li[aria-current="page"] a:hover{
-      color: var(--background-color);
-  }
   
-  body>[aria-label="navbar"] label{
+  [aria-label="navbar"] label{
       display: none;
   }
 }
 
-/**
- * Nav
- */
-:where(nav li)::before {
+/*
+=========================
+* Nav with no aria-label
+=========================
+*/
+ :where(nav li)::before {
   float: left;
   content: "​";
 }
 
-nav,
-nav ul {
+nav :not(aria-label="navbar"),
+nav ul{
   display: flex;
 }
 
 nav {
   justify-content: space-between;
 }
+
 nav ol,
 nav ul {
   align-items: center;
@@ -2224,7 +2247,7 @@ nav ol:last-of-type,
 nav ul:last-of-type {
   margin-right: calc(var(--nav-element-spacing-horizontal) * -1);
 }
-nav li {
+nav li :not(aria-label="navbar") {
   display: inline-block;
   margin: 0;
   padding: var(--nav-element-spacing-vertical) var(--nav-element-spacing-horizontal);
@@ -2232,7 +2255,7 @@ nav li {
 nav li > * {
   --spacing: 0;
 }
-nav :where(a, [role=link]) {
+nav :where(a, [role=link]) :not(aria-label="navbar"){
   display: inline-block;
   margin: calc(var(--nav-link-spacing-vertical) * -1) calc(var(--nav-link-spacing-horizontal) * -1);
   padding: var(--nav-link-spacing-vertical) var(--nav-link-spacing-horizontal);
@@ -2242,6 +2265,12 @@ nav :where(a, [role=link]) {
 nav :where(a, [role=link]):is([aria-current], :hover, :active, :focus) {
   text-decoration: none;
 }
+
+/*
+============
+* BreadCrumb
+============
+*/
 nav[aria-label=breadcrumb] {
   align-items: center;
   justify-content: start;
@@ -2271,6 +2300,11 @@ nav [role=button] {
   padding: var(--nav-link-spacing-vertical) var(--nav-link-spacing-horizontal);
 }
 
+/*
+======================
+* Nav in aside element
+======================
+*/
 aside nav,
 aside ol,
 aside ul,
