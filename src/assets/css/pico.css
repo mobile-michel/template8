@@ -11,7 +11,7 @@
 ================
 * Theme: default
 ================
-  Colors:
+  Hue colors:
     - Red:           0
     - Orange:       30
     - Yellow:       60
@@ -28,6 +28,7 @@
 */
 :root {
   --hue: 0;
+  --complementaryHue: calc(var(--hue) + 180);
   --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
     "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
@@ -225,8 +226,8 @@ kbd {
 
 [data-theme=light],
 :root:not([data-theme=dark]) {
-  --background-color: hsl(var(--hue), 20%, 93%);
-  --color: hsl(var(--hue), 20%, 32%);
+  --background-color: hsl(var(--hue), 20%, 95%);
+  --color: hsl(var(--hue), 20%, 20%);
   --h1-color: hsl(var(--hue), 30%, 15%);
   --h2-color: hsl(var(--hue), 27%, 19%);
   --h3-color: hsl(var(--hue), 25%, 23%);
