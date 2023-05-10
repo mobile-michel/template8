@@ -2080,7 +2080,7 @@ nav[aria-label="navbar"] + main {
 /* Header */
 [aria-label="navbar"]{
   background-color: var(--primary);
-  color: var(--primary-inverse);
+  ccolor: var(--primary-inverse);
   box-shadow: 1px 1px 5px 0px var(--color);
   position: fixed;
   top: 0;
@@ -2093,7 +2093,6 @@ nav[aria-label="navbar"] + main {
   color: var(--primary-inverse);
   font-size: calc(var(--font-size) * 2);
   margin-left: 0.5em;
-  text-decoration: none;
 }
 
 
@@ -2121,12 +2120,10 @@ nav[aria-label="navbar"] + main {
   display: block;
   padding: 1em;
   color: var(--primary-inverse);
-  text-decoration: none;
 }
 
 [aria-label="primary"] li[aria-current="page"]{
   background-color: var(--primary-focus);
-  color: var(--background);
 }
 
 [aria-label="primary"] ul a:hover{
